@@ -1,0 +1,143 @@
+.navbar {
+    display: flex;
+    padding: 2vw 5vw;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    background-color: #4F5DE4;
+
+    .mobile-nav {
+        display: none;
+
+        &>img {
+            width: 10vw;
+        }
+
+        align-items: center;
+
+    }
+
+    // img {}
+
+    ul {
+        display: flex;
+        align-items: center;
+        z-index: 2;
+
+        li {
+            a {
+                display: flex;
+                align-items: center;
+                color: #fff;
+                margin-right: 3vw;
+                letter-spacing: 1px;
+                font-size: 1.1vw;
+                transition: color .2s ease-in;
+                &:hover{
+                    color: #F58B35;
+                }
+            }
+
+            .activ {
+                color: #F58B35;
+
+            }
+        }
+
+        button {
+            display: none;
+        }
+    }
+
+    .get-in-touch {
+        display: flex;
+        align-items: center;
+
+        div {
+            display: flex;
+
+            img {
+                width: 1.4vw;
+                margin-right:1vw;
+            }
+        }
+
+        a {
+            color: #fff;
+            font-size: 1.2vw;
+            padding: .7vw 1.2vw;
+            border-radius: .5vw;
+            background: linear-gradient(to left, #F58B35 50%, #f57005 50%);
+            background-size: 200% 100%;
+            background-position: left bottom;
+            transition: all 1s ease;
+
+            &:hover{
+                background-position: right bottom;
+            }
+        }
+    }
+
+    @media screen and (max-width:480px) {
+        flex-direction: column;
+        overflow: hidden;
+        padding: unset;
+
+
+        .pc-logo {
+            display: none;
+        }
+
+        .mobile-nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        img {
+            width: 15vw;
+            float: right;
+            padding: 2vw;
+        }
+
+        ul {
+            background-color: #f7f7f7;
+            position: absolute;
+            align-items: start;
+            height: 100vh;
+            top: 0;
+            width: 80vw;
+            padding: 25vw 10vw;
+            z-index: 10;
+            flex-direction: column;
+            transform: translateX(-80vw);
+            transition: transform .2s ease-out;
+
+            li {
+                font-size: 1.2rem;
+                padding: 5vw 0;
+
+                a {
+                    margin: 1rem 0;
+                }
+            }
+
+            button {
+                display: flex;
+                position: absolute;
+                font-size: 1.5rem;
+                top: 11vw;
+                right: 10vw;
+                border: none;
+                background-color: #44D7B6;
+                color: #fff;
+                padding: 1vw 2vw;
+            }
+        }
+
+        .open-nav {
+            transform: translateX(-5vw);
+        }
+
+    }
+}
