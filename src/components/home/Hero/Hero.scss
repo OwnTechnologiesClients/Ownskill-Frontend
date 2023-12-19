@@ -93,7 +93,26 @@
     bottom: 3vw;
     border-radius: 1vw;
 
+    &:hover {
+      .border-translate {
+        transform: translate(0, 0);
+      }
+    }
+
+    .border-translate {
+      width: inherit;
+      position: absolute;
+      border-radius: 1vw;
+      height: 9.4vw;
+      border: 1px solid #fff;
+      transform: translate(1vw, 1vw);
+      transition: transform .3s ease-in-out;
+
+
+    }
+
     .profile {
+      z-index: 4;
       position: absolute;
       top: -3.5vw;
       left: 0vw;

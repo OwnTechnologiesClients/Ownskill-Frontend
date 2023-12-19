@@ -1,0 +1,90 @@
+.features {
+    padding: 8vw 5vw;
+    position: relative;
+
+    &>img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .all-feature-container {
+        display: flex;
+        justify-content: space-between;
+
+        .feature {
+            width: 20vw;
+            border: 1px solid #dbd4d8;
+            background-color: #F1F2FD;
+            box-shadow: 0 0 20px 1px #dbd4d8;
+            border-radius: 1vw;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                background-color: #4F5DE4;
+
+                .details {
+                    &>svg {
+                        background-color: #4F5DE4;
+                    }
+                }
+            }
+
+            .details {
+                user-select: none;
+                border-radius: 1vw;
+                background-color: #fff;
+                border-bottom-right-radius: 7vw;
+                padding: 3vw 2vw;
+
+                &>svg {
+                    font-size: 5vw;
+                    padding: 1vw;
+                    color: #fff;
+                    background-color: #F57005;
+                    border-radius: 1vw;
+                    transition: all .3s ease-in-out;
+                }
+
+                h3 {
+                    font-size: 1.5vw;
+                    font-weight: 700;
+                    margin: 1vw 0;
+                }
+
+                p {
+                    font-size: 1vw;
+                    margin: 1vw 0;
+                    color: #697585;
+                    font-weight: lighter;
+                }
+
+                .read-more {
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.2vw;
+                    cursor: pointer;
+
+                    span {
+                        color: #F57005;
+                    }
+
+                    svg {
+                        margin: 0 1vw;
+                    }
+
+                    &:hover {
+                        color: #4F5DE4;
+
+                        span {
+                            color: #4F5DE4;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
