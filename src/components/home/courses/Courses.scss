@@ -1,0 +1,130 @@
+.courses-section {
+    padding: 3vw 5vw;
+    position: relative;
+    background-image: url('../../../assets//course/course-bg-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #F1F2FD;
+
+    &>h4 {
+        text-align: center;
+        font-size: 2vw;
+        margin-top: 4vw;
+        color: #4F5DE4;
+    }
+
+    &>h2 {
+        text-align: center;
+        margin: 2vw;
+        font-size: 3vw;
+    }
+
+    .courses-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .course {
+            width: 27vw;
+            background-color: #fff;
+            padding: 2vw;
+            padding-bottom: 1vw;
+            position: relative;
+            border-radius: 1vw;
+            margin-top: 8vw;
+            padding-top: 3vw;
+
+            .course-image {
+                position: absolute;
+                right: 1vw;
+                top: -30%;
+
+                img {
+                    width: 12vw;
+                    padding: .7vw;
+                    border-radius: 50%;
+                    background-color: #E6E7E9;
+                }
+
+                .heart {
+                    position: absolute;
+                    top: 20%;
+                    background-color: #F57005;
+                    border-radius: 50%;
+                    left: -2vw;
+                    svg{
+                        font-size: 2vw;
+                        margin: 0 .4vw;
+                        color: #fff;
+                        margin-top: .5vw;
+                        padding: .2vw;
+                        
+                    }
+                }
+            }
+
+            .hours {
+                background-color: #F57005;
+                width: fit-content;
+                padding: .4vw .6vw;
+                color: #fff;
+                border-radius: .5vw;
+            }
+
+            .review {
+                display: flex;
+                margin: 1vw 0;
+            }
+
+            .heading {
+                font-size: 1.4vw;
+                font-weight: bold;
+                transition: all 2s ease;
+                z-index: 5;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .profile{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1vw;
+                background-color: #F1F2FD;
+                border-radius: .5vw;
+                margin: 1vw 0;
+
+                .name{
+                    display: flex;
+                    img{
+                        margin-right: 1vw;
+                    }
+                    .name-desig{
+                        h5{
+                            font-size: 1vw;
+                            font-weight: bold;
+                        }
+                        h6{
+                            color: #697585;
+                            font-size: .9vw;
+                            width: 10vw;
+                            margin-top: .5vw;
+                        }
+                    }
+                }
+                .price{
+                    h2{
+                        font-size: 1.5vw;
+                        color: #4F5DE4;
+                    }
+                    h4{
+                        font-size: 1vw;
+                        color: #F57005;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,126 @@
+.about-section {
+    display: flex;
+    padding: 0 5vw;
+
+    .about-circle-image {
+        position: relative;
+
+        .dot-1,
+        .dot-2 {
+            position: absolute;
+        }
+
+        .dot-1 {
+            z-index: -1;
+            animation: spin 20s linear infinite;
+        }
+
+        .dot-2 {
+            right: 0;
+            bottom: 0;
+            animation: up-down-home-img 2s infinite both;
+        }
+
+        .banner-about {
+            .circle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                height: 70%;
+                width: 70%;
+                background-color: #f58b35;
+                opacity: .4;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .about-details {
+        padding: 3vw;
+        width: 50%;
+
+        h4 {
+            font-size: 1.7vw;
+            font-weight: bold;
+            color: #4f5de4;
+        }
+
+        h2 {
+            font-size: 2.5vw;
+            margin: 1vw 0;
+            font-weight: bold;
+        }
+
+        &>p {
+            color: #697585;
+            font-weight: lighter;
+            font-size: 1.1vw;
+            margin: 2vw 0;
+        }
+
+        .about-detail-card {
+            border: 1px solid #f58b35;
+            padding: 1vw 1.5vw;
+            margin: 1vw 0;
+            border-radius: 2vw;
+            display: flex;
+
+            .card-image {
+                background-color: #F0F1FB;
+                border-radius: 1vw;
+                margin: .2vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 10vw;
+                margin-right: 2vw;
+                img {
+                    width: 60%;
+                }
+            }
+
+            h3 {
+                font-weight: bold;
+                font-size: 1.3vw;
+            }
+
+            p {
+                font-size: 1vw; 
+                color: #697585;
+                margin: 1vw 0;
+                font-weight: lighter;
+            }
+        }
+
+        button {
+            letter-spacing: 1px;
+            padding: 1vw 1.3vw;
+            font-size: 1.2vw;
+            border: none;
+            border-radius: 0.5vw;
+            color: #fff;
+            background: linear-gradient(to left,
+                    #4f5de4 50%, rgba(#4f5de4, 0.9) 50%);
+            background-size: 200% 100%;
+            background-position: left bottom;
+            transition: all 1s ease;
+            display: flex;
+            margin-top: 3vw;
+            align-items: center;
+
+            svg {
+                margin-left: 0.5vw;
+            }
+
+            &:hover {
+                // transform: skewX(-22deg);
+                background-position: right bottom;
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.counter-section{
+display: flex;
+    .shapes{
+        svg{
+            width: 30vw;
+            animation: zoom-in 2s infinite;
+        }
+    }
+}

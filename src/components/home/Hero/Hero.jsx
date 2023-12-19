@@ -51,7 +51,7 @@ const Hero = () => {
           predefined chunks as necessary,
         </p>
         <div className="buttons">
-          <button className="take" onClick={() => alert("111")}>
+          <button className="take">
             Take Now <FaArrowRightLong />
           </button>
           <button className="find">
