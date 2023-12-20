@@ -1,0 +1,95 @@
+.members-section {
+    background-color: #F1F2FD;
+    z-index: 0;
+    padding: 5vw;
+    position: relative;
+
+    &>img {
+        position: absolute;
+        left: 0;
+        z-index: -3;
+        top: 0;
+        width: 100%;
+    }
+
+    &>h4 {
+        text-align: center;
+        font-size: 2vw;
+        color: #4F5DE4;
+    }
+
+    &>h2 {
+        text-align: center;
+        margin: 2vw;
+        font-size: 3vw;
+    }
+
+    .member-cards {
+        display: flex;
+        justify-content: space-between;
+
+        .card {
+            position: relative;
+            transition: all 2s ease;
+
+            .box {
+                border-radius: 2vw;
+                top: -1vw;
+                left: -1vw;
+                z-index: -1;
+                width: 10vw;
+                background-color: #4F5DE4;
+                height: 12vw;
+                transition: all .5s ease;
+                position: absolute;
+            }
+
+            &>img {
+                border-radius: 2vw;
+            }
+
+            .overlay {
+                overflow: hidden;
+                display: flex;
+                transition: all .5s ease;
+                color: #fff;
+                width: 100%;
+                height: 99%;
+                position: absolute;
+                top: 0;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: 2vw;
+
+                h2 {
+                    transition: all .5s ease;
+                    font-size: 2.3vw;
+                    transform: translateX(-20vw);
+                }
+
+                h4 {
+                    transition: all .5s ease;
+                    transform: translateX(20vw);
+                    font-size: 1.5vw;
+                }
+            }
+
+            &:hover {
+                .box {
+                    background-color: #F57005;
+                }
+
+                .overlay {
+                    background-color: rgba($color: #393250, $alpha: .7);
+
+                }
+
+                h2,
+                h4 {
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+}

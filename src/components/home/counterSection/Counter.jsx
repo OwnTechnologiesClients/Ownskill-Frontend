@@ -1,22 +1,47 @@
 import React from "react";
 import "./Counter.scss";
 import { FaArrowRightLong } from "react-icons/fa6";
-
+import dotrectangle from "../../../assets/counter-dot.png";
 const Counter = () => {
   return (
     <div className="counter-section">
       <div className="detail">
+        <img src={dotrectangle} alt="" />
         <h4>Create Your Free Account</h4>
         <div className="content">
-          The generated Lorem Ipsum is therefore always free from repetition,
-          injected humour, or non-characteristic.
+          <div className="content-1">
+            The generated Lorem Ipsum is therefore always free from repetition,
+            injected humour, or non-characteristic.
+          </div>
         </div>
         <button>
-          Discover More <FaArrowRightLong />
+          Join Now <FaArrowRightLong />
         </button>
       </div>
 
       <div className="counter">
+        <div className="inside-counter-circle">
+          <h2>Register Now and </h2>
+          <h2>
+            Get a <span>50% Discount</span>
+          </h2>
+          <div className="counter-box">
+            <div className="b11">
+              <div className="b1">
+                <p>30</p>
+                <p>Days</p>
+              </div>
+              <div className="b1"><p>30</p>
+                <p>Days</p></div>
+            </div>
+            <div className="b11">
+              <div className="b1"><p>30</p>
+                <p>Days</p></div>
+              <div className="b1"><p>30</p>
+                <p>Days</p></div>
+            </div>
+          </div>
+        </div>
         <div className="shapes">
           <svg
             viewBox="0 0 581 596"
@@ -62,8 +87,6 @@ const Counter = () => {
             </defs>
           </svg>
         </div>
-
-        
       </div>
     </div>
   );

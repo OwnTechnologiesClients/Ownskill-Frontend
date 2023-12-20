@@ -1,0 +1,89 @@
+.testimonial-section {
+    &>h4 {
+        text-align: center;
+        font-size: 2vw;
+        margin-top: 4vw;
+        color: #4F5DE4;
+    }
+
+    &>h2 {
+        text-align: center;
+        margin: 2vw;
+        font-size: 3vw;
+    }
+
+    .card-banner {
+        display: flex;
+        position: relative;
+        height: 40vw;
+
+        .testimonial-container {
+            position: absolute;
+            margin: 8vw 5vw;
+            width: 50%;
+            border: 2px solid #717785;
+            border-radius: 3vw;
+
+            .swiper-wrapper {
+                width: 100%;
+
+                .testimonial-card {
+                    height: 20vw;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    &>img{
+                        border-radius: 50%;
+                        position: absolute;
+                        top: -50%;
+                        width: 30%;
+                    }
+
+                    p{
+                        font-size: 1.3vw;
+                        line-height: 2vw;
+                        color: #717785;
+                        font-weight: normal;
+                        padding: 1.5vw;
+                    }
+                    .profile{
+                        padding:0 2vw;
+                        h3{
+                            font-size: 1.5vw;
+                        }
+                        h6{
+                            font-size: 1.2vw;
+                            color: #717785;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .banner {
+            display: flex;
+
+
+            .banner {
+                position: absolute;
+                top: 4vw;
+                right: 3vw;
+            }
+
+            .brush {
+                position: absolute;
+                right: 0;
+                animation: up-down-home-img 2s infinite;
+            }
+
+            svg {
+                position: absolute;
+                z-index: -1;
+                right: 0;
+                width: 40%;
+            }
+        }
+    }
+}
