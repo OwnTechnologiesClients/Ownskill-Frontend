@@ -10,7 +10,7 @@ import book from "../../../assets/hero/banner-book.png";
 import spiralArrow from "../../../assets/hero/banner-1-shape-1.png";
 import profile from "../../../assets/hero/banner-author.png";
 import { FaCirclePlay } from "react-icons/fa6";
-
+import 'animate.css'
 const Hero = () => {
   return (
     <div className="home-hero">
@@ -44,7 +44,7 @@ const Hero = () => {
       </div>
       <div className="white-circle white-circle-animated"></div>
 
-      <div className="text">
+      <div className="text animate__animated animate__bounceInLeft">
         <h1>A Better Learning Journey Future Start Here</h1>
         <p>
           All the Lorem Ipsum generators on the Internet tend to repeat
@@ -59,7 +59,7 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <div className="banner-image-circle">
+      <div className="banner-image-circle animate__animated animate__bounceInRight">
         <img src={bannerImage} alt="" />
       </div>
     </div>

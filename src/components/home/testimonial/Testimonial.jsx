@@ -38,6 +38,7 @@ const Testimonial = () => {
               delay: 255500,
               pauseOnMouseEnter: true,
             }}
+            loop={true}
             slidesPerView={1}
             pagination={{
               clickable: true,

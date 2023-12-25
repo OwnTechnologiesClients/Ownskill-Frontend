@@ -9,6 +9,7 @@ import Counter from "../../components/home/counterSection/Counter";
 import Testimonial from "../../components/home/testimonial/Testimonial";
 import Members from "../../components/home/members/Members";
 import Certificate from "../../components/home/certificate/Certificate";
+import Footer from "../../components/footer/Footer";
 
 const Home = () => {
   return (
@@ -32,6 +33,9 @@ const Home = () => {
       <Members />
 
       <Certificate />
+
+      <Footer/>
+      
     </div>
   );
 };

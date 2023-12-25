@@ -3,10 +3,11 @@ import "./Features.scss";
 import serviceBg from "../../../assets/hero/service-bg-1.png";
 import { FaAngleRight } from "react-icons/fa6";
 import { TbBulb } from "react-icons/tb";
+import 'animate.css';
 
 const OneFeature = () => {
   return (
-    <div className="feature">
+    <div className="feature animate__animated animate__zoomIn">
       <div className="bg-banner"></div>
       <div className="details">
         <TbBulb/>
