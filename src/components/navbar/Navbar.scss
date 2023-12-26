@@ -1,11 +1,20 @@
-.navbar {
+.sticky {
+    transform: translateY(-7.5vw) !important;
+}
+
+.sticky-nav {
+    z-index: 999;
     display: flex;
+    position: fixed;
+    width: 100%;
+    transform: translateY(-15vw);
     padding: 2vw 5vw;
     justify-content: space-between;
     align-items: center;
     font-family: 'Rubik', sans-serif;
     font-weight: 300;
-    background-color: #4F5DE4;
+    background-color: #212529;
+    transition: all 1s ease;
 
     .mobile-nav {
         display: none;
@@ -34,7 +43,8 @@
                 letter-spacing: 1px;
                 font-size: 1.1vw;
                 transition: color .2s ease-in;
-                &:hover{
+
+                &:hover {
                     color: #F58B35;
                 }
             }
@@ -59,7 +69,7 @@
 
             img {
                 width: 1.4vw;
-                margin-right:1vw;
+                margin-right: 1vw;
             }
         }
 
@@ -73,7 +83,92 @@
             background-position: left bottom;
             transition: all 1s ease;
 
-            &:hover{
+            &:hover {
+                background-position: right bottom;
+            }
+        }
+    }
+
+}
+
+.navbar {
+    display: flex;
+    padding: 2vw 5vw;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    background-color: #4F5DE4;
+
+
+    .mobile-nav {
+        display: none;
+
+        &>img {
+            width: 10vw;
+        }
+
+        align-items: center;
+
+    }
+
+    // img {}
+
+    ul {
+        display: flex;
+        align-items: center;
+        z-index: 2;
+
+        li {
+            a {
+                display: flex;
+                align-items: center;
+                color: #fff;
+                margin-right: 3vw;
+                letter-spacing: 1px;
+                font-size: 1.1vw;
+                transition: color .2s ease-in;
+
+                &:hover {
+                    color: #F58B35;
+                }
+            }
+
+            .activ {
+                color: #F58B35;
+
+            }
+        }
+
+        button {
+            display: none;
+        }
+    }
+
+    .get-in-touch {
+        display: flex;
+        align-items: center;
+
+        div {
+            display: flex;
+
+            img {
+                width: 1.4vw;
+                margin-right: 1vw;
+            }
+        }
+
+        a {
+            color: #fff;
+            font-size: 1.2vw;
+            padding: .7vw 1.2vw;
+            border-radius: .5vw;
+            background: linear-gradient(to left, #F58B35 50%, #f57005 50%);
+            background-size: 200% 100%;
+            background-position: left bottom;
+            transition: all 1s ease;
+
+            &:hover {
                 background-position: right bottom;
             }
         }

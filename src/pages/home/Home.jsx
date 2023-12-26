@@ -6,6 +6,10 @@ import AboutUs from "../../components/home/aboutUs/AboutUs";
 import Category from "../../components/home/category/Category";
 import Courses from "../../components/home/courses/Courses";
 import Counter from "../../components/home/counterSection/Counter";
+import Testimonial from "../../components/home/testimonial/Testimonial";
+import Members from "../../components/home/members/Members";
+import Certificate from "../../components/home/certificate/Certificate";
+import Footer from "../../components/footer/Footer";
 
 const Home = () => {
   return (
@@ -24,6 +28,14 @@ const Home = () => {
 
       <Counter />
 
+      <Testimonial />
+
+      <Members />
+
+      <Certificate />
+
+      <Footer/>
+      
     </div>
   );
 };
