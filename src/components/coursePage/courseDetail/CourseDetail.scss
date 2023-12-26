@@ -1,0 +1,313 @@
+.course-detail {
+    // background-color: #fafafa;
+    padding: 5vw;
+    display: flex;
+    justify-content: space-between;
+
+    .course-detail-expand {
+        width: 58vw;
+        position: relative;
+
+        &>img {
+            border-radius: 1vw;
+            width: 58vw;
+        }
+
+        .profile-section-bar {
+            display: flex;
+            align-items: center;
+            margin: 1vw 0;
+            padding: 1vw 0;
+
+            img {
+                width: 3vw;
+            }
+
+            .name-design {
+                margin: 0 1vw;
+
+                h2 {
+                    font-size: 1.2vw;
+                    font-weight: bold;
+                }
+
+                h3 {
+                    font-size: 1vw;
+                    color: #697585;
+                    text-transform: uppercase;
+                }
+            }
+
+            &>button {
+                border-radius: .5vw;
+                margin: 0 1vw;
+                padding: .5vw;
+                font-size: .9vw;
+                border: none;
+                background-color: #4F5DE4;
+                color: white;
+                transition: all .5s ease;
+
+                &:hover {
+                    background-color: #F57005;
+                }
+            }
+
+            .rating {
+                display: flex;
+                align-items: center;
+
+                svg {
+                    color: #F57005;
+                    font-size: 1vw;
+                }
+
+                p {
+                    font-size: 1.1vw;
+                }
+
+            }
+
+            .price {
+                position: absolute;
+                right: 0;
+                font-size: 2vw;
+                font-weight: bolder;
+                color: #F57005;
+            }
+        }
+
+        &>h2 {
+            font-size: 2vw;
+        }
+
+        .course-navigation {
+            background-color: #f6f6f6;
+            display: flex;
+            border-radius: 1vw;
+            margin: 1vw 0;
+
+            button {
+                padding: 1vw 1.3vw;
+                font-size: 1.1vw;
+                font-weight: bold;
+                margin: 1vw;
+                border: none;
+                border-radius: 0.5vw;
+                background: linear-gradient(to top, #fff 50%, #f57005 50%);
+                background-size: 100% 200%;
+                background-position: bottom;
+                transition: all 1s ease;
+                display: flex;
+                align-items: center;
+                color: #2A254D;
+
+                svg {
+                    margin-left: 0.5vw;
+                }
+
+                &:hover {
+                    // transform: skewX(-22deg);
+                    color: #fff;
+                    background-position: top;
+                }
+            }
+        }
+
+        .course-detail-content-1 {
+            p {
+                color: #697585;
+                font-size: 1.15vw;
+                text-align: justify;
+                line-height: 2vw;
+            }
+
+            ul {
+                li {
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.4vw;
+                    margin: 1vw 0;
+                    color: #2A254d;
+
+                    svg {
+                        font-size: 1.5vw;
+                        color: #F57005;
+                        margin-right: 1vw;
+
+                    }
+                }
+            }
+        }
+
+        .course-detail-content-2 {
+            margin: 3vw 0;
+            display: flex;
+            align-items: center;
+
+            &>img {
+                width: 20vw;
+                border-radius: 50%;
+            }
+
+            &>div {
+                margin: 0 2vw;
+                height: 10vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                h2 {
+                    font-size: 1.5vw;
+                }
+
+                h3 {
+                    font-size: .8vw;
+                    color: #697585;
+                    font-weight: normal;
+                }
+
+                p {
+                    font-size: 1.1vw;
+                    line-height: 1.7;
+                    color: #697585;
+                }
+            }
+        }
+
+        .course-detail-content-3 {
+            h2 {
+                font-size: 1.5vw;
+                color: #2A254D;
+            }
+
+            .review-card-course-page-section {
+                display: flex;
+                margin: 1vw 0;
+                margin-right: 1vw;
+                padding: 2vw 0;
+
+                &>img {
+                    border-radius: 50%;
+                    margin-right: 2vw;
+                }
+
+                .heading {
+                    padding: 1vw 0;
+
+                    font-size: 1.5vw;
+                    display: flex;
+                    justify-content: space-between;
+                    color: #2A254d;
+
+                    svg {
+                        color: #F57005;
+                    }
+                }
+
+                p {
+                    color: #697585;
+                    text-align: justify;
+                    font-size: 1.1vw;
+                    line-height: 1.8vw;
+                }
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid #e4e4e4;
+                }
+            }
+
+            .add-reviews {
+                h3 {
+                    font-size: 1.6vw;
+                    font-weight: 600;
+                    margin: 2vw 0;
+                }
+
+                form {
+                    .stars {
+                        margin: 1vw 0;
+                        display: flex;
+                        font-size: 1.4vw;
+
+                        .star-empty,
+                        .star-full {
+                            position: absolute;
+                            font-size: 1.8vw;
+                            left: 12vw;
+                            color: #F57005;
+                        }
+
+                        .star-empty {
+                            z-index: 2;
+                            font-size: 2vw;
+                        }
+
+                        .star-full {
+                            z-index: 1;
+                        }
+                    }
+
+                    .name-address {
+                        display: flex;
+                        justify-content: space-between;
+
+                        input {
+                            padding: 1.2vw 2vw;
+                            border-radius: .5vw;
+                            border: none;
+                            font-size: 1.1vw;
+                            width: 48%;
+                            outline: none;
+                            background-color: #f4f4f4;
+                            margin: 1vw 0;
+                        }
+                    }
+
+                    textArea {
+                        background-color: #f4f4f4;
+                        padding: 1vw;
+                        font-size: 1.1vw;
+                        outline: none;
+                        display: block;
+                        border: none;
+                        max-width: 100%;
+                        min-width: 100%;
+                        height: 10vw;
+                    }
+
+                    button {
+                        padding: 1vw 0;
+                        width: 25%;
+                        font-size: 1.3vw;
+                        font-weight: bold;
+                        margin: 1vw 0;
+                        border: none;
+                        border-radius: 0.5vw;
+                        background: linear-gradient(to left, #f58b35 50%, #f57005 50%);
+                        background-size: 200% 100%;
+                        background-position: bottom left;
+                        transition: all 1s ease;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #fff;
+
+                        svg {
+                            margin-left: 0.5vw;
+                        }
+
+                        &:hover {
+                            // transform: skewX(-22deg);
+                            background-position: bottom right;
+                        }
+                    }
+
+                }
+            }
+
+        }
+    }
+
+
+}

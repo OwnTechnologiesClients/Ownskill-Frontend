@@ -8,6 +8,7 @@ import Spinner from "./components/spinner/Spinner";
 import { useDispatch } from "react-redux";
 import { SetLoading } from "./redux/loaderSlice";
 import 'animate.css';
+import CoursePage from "./pages/courses/CoursePage";
 
 function App() {
   const { loading } = useSelector((state) => state.loaders);
@@ -28,6 +29,8 @@ function App() {
         <ScrollToTop>
           <Routes>
             <Route path={"/"} element={<Home />} />
+            <Route path={"/courses"} element={<CoursePage />} />
+            <Route path={"/courses/:id"} element={<CoursePage />} />
           </Routes>
         </ScrollToTop>
       </BrowserRouter>
