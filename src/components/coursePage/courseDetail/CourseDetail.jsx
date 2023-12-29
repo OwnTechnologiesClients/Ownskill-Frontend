@@ -3,7 +3,6 @@ import "./CourseDetail.scss";
 import "./CourseDetail1.scss";
 import courseImage from "../../../assets/coursePage/course-detail-1.jpg";
 import pfp from "../../../assets/coursePage/author-7.png";
-import instructor from "../../../assets/coursePage/instructor-1.jpg";
 import courseCardImage from "../../../assets/coursePage/lc-1.jpg";
 import { IoFolderOpenOutline } from "react-icons/io5";
 import {
@@ -12,15 +11,26 @@ import {
   FaCircleChevronRight,
   FaStar,
 } from "react-icons/fa6";
-import { GiBackwardTime, GiNotebook } from "react-icons/gi";
+import { GiBackwardTime, GiBulb, GiNotebook } from "react-icons/gi";
 import { PiStudent } from "react-icons/pi";
 import { CiStar } from "react-icons/ci";
 import { IoPlayCircleOutline } from "react-icons/io5";
 import { HiOutlineLightBulb } from "react-icons/hi";
 import { RiSpeakLine } from "react-icons/ri";
+import Review from "../detailSubSections/Review";
+import Overview from "../detailSubSections/Overview";
+import Instructor from "../detailSubSections/Instructor";
+import Curriculum from "../detailSubSections/Curriculum";
 
 const CourseDetail = () => {
-  const [addRating, setAddRating] = useState(0);
+  const [currentSubSection, setcurrentSibSection] = useState("overview");
+
+  const detailSubSection = {
+    overview: <Overview />,
+    review: <Review />,
+    instructor: <Instructor />,
+    curriculum: <Curriculum />,
+  };
 
   return (
     <div className="course-detail">
@@ -46,11 +56,41 @@ const CourseDetail = () => {
         <h2>Management Consultants in Competitive Markets</h2>
 
         <div className="course-navigation">
-          <button>Overview</button>
-          <button>Curriculum</button>
-          <button>Review</button>
-          <button>Instructor</button>
+          <button
+            className={
+              currentSubSection === "overview" ? "subsection-active" : ""
+            }
+            onClick={() => setcurrentSibSection("overview")}
+          >
+            Overview
+          </button>
+          <button
+            className={
+              currentSubSection === "curriculum" ? "subsection-active" : ""
+            }
+            onClick={() => setcurrentSibSection("curriculum")}
+          >
+            Curriculum
+          </button>
+          <button
+            className={
+              currentSubSection === "review" ? "subsection-active" : ""
+            }
+            onClick={() => setcurrentSibSection("review")}
+          >
+            Review
+          </button>
+          <button
+            className={
+              currentSubSection === "instructor" ? "subsection-active" : ""
+            }
+            onClick={() => setcurrentSibSection("instructor")}
+          >
+            Instructor
+          </button>
         </div>
+
+        {detailSubSection[currentSubSection]}
 
         {/* <div className="course-detail-content-1">
           <p>
@@ -219,24 +259,61 @@ const CourseDetail = () => {
             </form>
           </div>
         </div> */}
-        <div className="course-detail-content-4">
-          <h2>Starting Beginners Level Course</h2>
-          <p>Nam vel lacus eu nisl bibendum accumsan vitae vitae nibh. Nam nec eros id magna hendrerit sagittis. Nullam sed mi non odio feugiat volutpat sit amet nec elit. Maecenas id hendrerit ipsum. Sed eget auctor metus, ac dapibus dolor. Nam vel lacus eu nisl bibendum accumsan vitae vitae nibh.</p>
+        {/* <div className="course-detail-content-4">
+          <div className="starting">
+            <h2 className="heading">Starting Beginners Level Course</h2>
+            <p className="heading-desc">
+              Nam vel lacus eu nisl bibendum accumsan vitae vitae nibh. Nam nec
+              eros id magna hendrerit sagittis. Nullam sed mi non odio feugiat
+              volutpat sit amet nec elit. Maecenas id hendrerit ipsum. Sed eget
+              auctor metus, ac dapibus dolor. Nam vel lacus eu nisl bibendum
+              accumsan vitae vitae nibh.
+            </p>
 
-          <div className="intro">
-            <IoPlayCircleOutline/> Introduction of Editing
-            <button>Preview</button>
-            <span>10 Minutes</span>
+            <div className="intro">
+              <IoPlayCircleOutline /> Introduction of Editing
+              <button>Preview</button>
+              <span>10 Minutes</span>
+            </div>
+            <div className="overview">
+              <IoPlayCircleOutline /> Overview of Editing
+              <button>Preview</button>
+              <span>10 Minutes</span>
+            </div>
+            <div className="basic">
+              <IoFolderOpenOutline /> Basic Editing Technology
+            </div>
+            <div className="quiz">
+              <HiOutlineLightBulb /> Quiz
+              <span>6 Questions</span>
+            </div>
           </div>
-          <div className="overview">
-            <IoPlayCircleOutline/> Overview of Editing
-            <button>Preview</button>
-            <span>10 Minutes</span>
+          <div className="intermediate">
+            <h2 className="heading">Intermediate Level Course</h2>
+            <p className="heading-desc">
+              Nam vel lacus eu nisl bibendum accumsan vitae vitae nibh. Nam nec
+              eros id magna hendrerit sagittis. Nullam sed mi non odio feugiat
+              volutpat sit amet nec elit. Maecenas id hendrerit ipsum. Sed eget
+              auctor metus, ac dapibus dolor. Nam vel lacus eu nisl bibendum
+              accumsan vitae vitae nibh.
+            </p>
+
+            <div className="intro">
+              <IoPlayCircleOutline /> Introduction of Editing
+              <button>Preview</button>
+              <span>10 Minutes</span>
+            </div>
+            <div className="overview">
+              <IoPlayCircleOutline /> Overview of Editing
+              <button>Preview</button>
+              <span>10 Minutes</span>
+            </div>
+            <div className="quiz">
+              <HiOutlineLightBulb /> Quiz
+              <span>6 Questions</span>
+            </div>
           </div>
-          <div className="basic">
-            <IoFolderOpenOutline/> Basic Editing Technology
-          </div>
-        </div>
+        </div> */}
       </div>
       <div className="features-other-courses">
         <div className="features-course-page">

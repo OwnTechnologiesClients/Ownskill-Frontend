@@ -97,7 +97,7 @@
                 background: linear-gradient(to top, #fff 50%, #f57005 50%);
                 background-size: 100% 200%;
                 background-position: bottom;
-                transition: all 1s ease;
+                transition: all .5s ease;
                 display: flex;
                 align-items: center;
                 color: #2A254D;
@@ -111,6 +111,10 @@
                     color: #fff;
                     background-position: top;
                 }
+            }
+            .subsection-active{
+                background-position: top;
+                color: #fff;
             }
         }
 
@@ -307,6 +311,58 @@
             }
 
         }
+
+        .course-detail-content-4 {
+
+            .starting,
+            .intermediate {
+                .heading {
+                    font-weight: 600;
+                    font-size: 1.7vw;
+                }
+
+                .heading-desc {
+                    font-size: 1.2vw;
+                    line-height: 2vw;
+                    color: #697585;
+                }
+
+                .intro,
+                .overview,
+                .basic,
+                .quiz {
+                    display: flex;
+                    align-items: center;
+                    padding: 2vw 0;
+                    position: relative;
+                    font-size: 1.5vw;
+                    border-bottom: 1px solid #e4e4e4;
+
+                    svg {
+                        font-size: 2.7vw;
+                        color: #F57005;
+                        margin-right: 1vw;
+                    }
+
+                    button {
+                        padding: .5vw;
+                        border: none;
+                        border-radius: .4vw;
+                        margin-left: 2vw;
+                        font-size: 1vw;
+                        color: #697585;
+                    }
+
+                    span {
+                        position: absolute;
+                        right: 0;
+                        font-size: 1.1vw;
+                        color: #697585;
+                    }
+                }
+            }
+        }
+
     }
 
 
